@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Text -->
+<!-- Author: blkbutterfly74 -->
+<!-- DateCreated: 1/12/2024 12:22:53 AM -->
+<GameData>
+	<BaseGameText>
+		<Row Tag="LOC_CHALLENGE_ROBOT_REVOLUTION_NAME">
+			<Text>Robot Revolution</Text>
+		</Row>
+		<Row Tag="LOC_CHALLENGE_ROBOT_REVOLUTION_TOOLTIP">
+			<Text>Click to launch the Robot Revolution Challenge of the Month</Text>
+		</Row>
+		<Row Tag="LOC_CHALLENGE_ROBOT_REVOLUTION_DESCRIPTION">
+			<Text>Do you have what it takes to ensure your civilization's survival for 100 turns in a frozen, post-nuclear future? Resources are sparse, disasters are intense, and the land itself seems determined to snuff out the last traces of humanity. Oh, and did we mention the robots?[NEWLINE][NEWLINE]Your memory of life before the robot takeover is fading, but parts of the world are still known to you. As the Prime Minister of Canada, will you scour the frozen wasteland for resources and remnants of the old world, or hunker down in your only remaining city and hope to outlast your opponents? </Text>
+		</Row>
+	</BaseGameText>
+</GameData>
