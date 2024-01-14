@@ -230,7 +230,7 @@ function GeneratePlotTypes(world_age)
 							local iRandom = TerrainBuilder.GetRandomNumber(iRandomRoll, "Random Region Edges");
 							if(iRandom == 0 and iRandomRoll > 0) then
 								plotTypes[i] = g_PLOT_TYPE_LAND;
-								TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
+								TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_SNOW);  -- temporary setting so can calculate areas
 								iNumTotalLandTiles = iNumTotalLandTiles + 1;
 							else 
 								plotTypes[i] = g_PLOT_TYPE_OCEAN;
@@ -238,7 +238,7 @@ function GeneratePlotTypes(world_age)
 							end
 						else
 							plotTypes[i] = g_PLOT_TYPE_LAND;
-							TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_DESERT);  -- temporary setting so can calculate areas
+							TerrainBuilder.SetTerrainType(pPlot, g_TERRAIN_TYPE_SNOW);  -- temporary setting so can calculate areas
 							iNumTotalLandTiles = iNumTotalLandTiles + 1;
 						end
 					else
@@ -658,10 +658,10 @@ function FeatureGenerator:AddJunglesAtPlot(plot, iX, iY)
 					TerrainBuilder.SetFeatureType(plot, g_FEATURE_JUNGLE);
 					local terrainType = plot:GetTerrainType();
 
-					if(terrainType == g_TERRAIN_TYPE_PLAINS_HILLS or terrainType == g_TERRAIN_TYPE_GRASS_HILLS) then
-						TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_PLAINS_HILLS);
+					if(terrainType == g_TERRAIN_TYPE_SNOW_HILLS or terrainType == g_TERRAIN_TYPE_TUNDRA_HILLS) then
+						TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_SNOW_HILLS);
 					else
-						TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_PLAINS);
+						TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_SNOW);
 					end
 
 					self.iJungleCount = self.iJungleCount + 1;
@@ -780,44 +780,44 @@ function GenerateTerrainTypes(plotTypes)
 			local iDistanceRoll = TerrainBuilder.GetRandomNumber(3, "Add a terrain shift") - 2;
 			local iModifiedDistance = iDistance + iDistanceRoll;
 			if (plotTypes[index] == g_PLOT_TYPE_MOUNTAIN) then
-			    terrainTypes[index] = g_TERRAIN_TYPE_GRASS_MOUNTAIN;
+			    terrainTypes[index] = g_TERRAIN_TYPE_TUNDRA_MOUNTAIN;
 				
 				if(iModifiedDistance >= fSnowTop or iModifiedDistance <= fSnowBottom) then
 					terrainTypes[index] = g_TERRAIN_TYPE_SNOW_MOUNTAIN;
 				elseif(iModifiedDistance >= fTundraTop or iModifiedDistance <= fTundraBottom) then
 					terrainTypes[index] = g_TERRAIN_TYPE_TUNDRA_MOUNTAIN;
 				elseif (iModifiedDistance > fGrassBottom and iModifiedDistance < fGrassTop) then
-					terrainTypes[index] = g_TERRAIN_TYPE_GRASS_MOUNTAIN;
+					terrainTypes[index] = g_TERRAIN_TYPE_TUNDRA_MOUNTAIN;
 				else
 					local desertVal = deserts:GetHeight(iX, iY);
 					local plainsVal = plains:GetHeight(iX, iY);
 					if ((desertVal >= iDesertBottom) and (desertVal <= iDesertTop) and (iModifiedDistance >= fDesertBottomTop) and (iModifiedDistance < fDesertTopTop)) then
-						terrainTypes[index] = g_TERRAIN_TYPE_DESERT_MOUNTAIN;
+						terrainTypes[index] = g_TERRAIN_TYPE_SNOW_MOUNTAIN;
 					elseif ((desertVal >= iDesertBottom) and (desertVal <= iDesertTop) and (iModifiedDistance <= fDesertBottomBottom) and (iModifiedDistance > fDesertTopBottom)) then
-						terrainTypes[index] = g_TERRAIN_TYPE_DESERT_MOUNTAIN;
+						terrainTypes[index] = g_TERRAIN_TYPE_SNOW_MOUNTAIN;
 					elseif ((plainsVal >= iPlainsBottom) and (plainsVal <= iPlainsTop)) then
-						terrainTypes[index] = g_TERRAIN_TYPE_PLAINS_MOUNTAIN;
+						terrainTypes[index] = g_TERRAIN_TYPE_SNOW_MOUNTAIN;
 					end
 				end
 
 			elseif (plotTypes[index] ~= g_PLOT_TYPE_OCEAN) then
-				terrainTypes[index] = g_TERRAIN_TYPE_GRASS;
+				terrainTypes[index] = g_TERRAIN_TYPE_TUNDRA;
 				
 				if(iModifiedDistance >= fSnowTop or iModifiedDistance <= fSnowBottom) then
 					terrainTypes[index] = g_TERRAIN_TYPE_SNOW;
 				elseif(iModifiedDistance >= fTundraTop or iModifiedDistance <= fTundraBottom) then
 					terrainTypes[index] = g_TERRAIN_TYPE_TUNDRA;
 				elseif (iModifiedDistance > fGrassBottom and iModifiedDistance < fGrassTop) then
-					terrainTypes[index] = g_TERRAIN_TYPE_GRASS;
+					terrainTypes[index] = g_TERRAIN_TYPE_TUNDRA;
 				else
 					local desertVal = deserts:GetHeight(iX, iY);
 					local plainsVal = plains:GetHeight(iX, iY);
 					if ((desertVal >= iDesertBottom) and (desertVal <= iDesertTop) and (iModifiedDistance >= fDesertBottomTop) and (iModifiedDistance < fDesertTopTop)) then
-						terrainTypes[index] = g_TERRAIN_TYPE_DESERT;
+						terrainTypes[index] = g_TERRAIN_TYPE_SNOW;
 					elseif ((desertVal >= iDesertBottom) and (desertVal <= iDesertTop) and (iModifiedDistance <= fDesertBottomBottom) and (iModifiedDistance > fDesertTopBottom)) then
-						terrainTypes[index] = g_TERRAIN_TYPE_DESERT;
+						terrainTypes[index] = g_TERRAIN_TYPE_SNOW;
 					elseif ((plainsVal >= iPlainsBottom) and (plainsVal <= iPlainsTop)) then
-						terrainTypes[index] = g_TERRAIN_TYPE_PLAINS;
+						terrainTypes[index] = g_TERRAIN_TYPE_SNOW;
 					end
 				end
 			end
