@@ -51,6 +51,10 @@
 		<Row ParameterId="StartPosition" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE"/>
 	</ParameterDependencies>
 
+	<ConfigurationUpdates>
+		<Row SourceGroup="Game" SourceId="RULESET" SourceValue="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" TargetGroup="Game" TargetId="GAME_REALISM" TargetValue="4" Hash="0" Static="1"/>
+	</ConfigurationUpdates>
+
 	<MapLeaders>
 		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="RANDOM"/>
 		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_LAURIER"/>
