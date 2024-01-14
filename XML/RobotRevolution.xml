@@ -57,4 +57,22 @@
 			<Where Era="UNIT_AT_CREW" Unit="UNIT_BUILDER"/>
 		</Update>
 	</MajorStartingUnits>
+
+	<BarbarianTribe_ExtraUnits>
+		<Row>
+			<TribeType>TRIBE_MELEE</TribeType>
+			<UnitType>UNIT_GIANT_DEATH_ROBOT</UnitType>
+			<Number>7</Number>
+		</Row>
+		<Row>
+			<TribeType>TRIBE_CAVALRY</TribeType>
+			<UnitType>UNIT_GIANT_DEATH_ROBOT</UnitType>
+			<Number>7</Number>
+		</Row>
+		<Row>
+			<TribeType>TRIBE_NAVAL</TribeType>
+			<UnitType>UNIT_GIANT_DEATH_ROBOT</UnitType>
+			<Number>7</Number>
+		</Row>
+	</BarbarianTribe_ExtraUnits>
 </GameInfo>
