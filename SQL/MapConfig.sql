@@ -47,10 +47,8 @@ VALUES	('Resources',		'Map',					'MAP_SCRIPT',			'NotEquals',	'{220fd11e-51db-4d
 -- MapSUpportedValues requires rows for each city-state that will appear on this map - IMPORTANT: use the CivilizationType here instead of the LeaderType!!
 
 INSERT INTO MapLeaders
-		(Map,																			LeaderType)
+		(Map,																LeaderType)
 VALUES	('{220fd11e-51db-4def-8e04-46d99856a122}Maps/CustomMap.Civ6Map',	'RANDOM'),
-		('{220fd11e-51db-4def-8e04-46d99856a122}Maps/CustomMap.Civ6Map',	'RANDOM_POOL1'),
-		('{220fd11e-51db-4def-8e04-46d99856a122}Maps/CustomMap.Civ6Map',	'RANDOM_POOL2'),
 		('{220fd11e-51db-4def-8e04-46d99856a122}Maps/CustomMap.Civ6Map',	'LEADER_LAURIER'),
 		('{220fd11e-51db-4def-8e04-46d99856a122}Maps/CustomMap.Civ6Map',	'LEADER_ABRAHAM_LINCOLN'),
 		('{220fd11e-51db-4def-8e04-46d99856a122}Maps/CustomMap.Civ6Map',	'LEADER_VICTORIA'),
