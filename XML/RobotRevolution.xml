@@ -54,7 +54,7 @@
 
 		<Update>
 			<Set Quantity="1"/>
-			<Where Era="UNIT_AT_CREW" Unit="UNIT_BUILDER"/>
+			<Where Era="ERA_INFORMATION" Unit="UNIT_AT_CREW"/>
 		</Update>
 	</MajorStartingUnits>
 
