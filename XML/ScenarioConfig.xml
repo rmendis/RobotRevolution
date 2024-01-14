@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScenarioConfig -->
+<!-- Author: blkbutterfly74 -->
+<!-- DateCreated: 1/14/2024 5:38:59 PM -->
+<GameInfo>
+	<RuleSets>
+		<Row>
+			<RuleSetType>RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE</RuleSetType>
+			<Name>LOC_CHALLENGE_ROBOT_REVOLUTION_NAME</Name>
+			<Description>LOC_CHALLENGE_ROBOT_REVOLUTION_TOOLTIP</Description>
+			<LongDescription>LOC_CHALLENGE_ROBOT_REVOLUTION_DESCRIPTION</LongDescription>
+			<VictoryDomain>RobotRevolutionChallenge_Victories</VictoryDomain>
+			<ScenarioSetupPortrait></ScenarioSetupPortrait>
+			<ScenarioSetupPortraitBackground>LEADER_LAURIER_BACKGROUND</ScenarioSetupPortraitBackground>
+			<RequiresNoTeams>1</RequiresNoTeams>
+			<RequiresUniqueLeaders>1</RequiresUniqueLeaders>
+			<RequiresUniqueCivilizations>1</RequiresUniqueCivilizations>
+			<MaxTurns>100</MaxTurns>
+			<FixedMaxTurns>1</FixedMaxTurns>
+			<IsScenario>1</IsScenario>
+			<GameCore>Expansion2</GameCore>
+		</Row>
+	</RuleSets>
+	<RulesetDomainOverrides>
+		<Row Ruleset="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" ParameterId="Map" Domain="RobotRevolutionChallenge_Maps"/>
+		<Row Ruleset="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" ParameterId="PlayerLeader" Domain="Players:Expansion2_Players"/>
+	</RulesetDomainOverrides>
+	<RulesetSupportedValues>
+		<Row Ruleset="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" Domain="StandardEras" Value="ERA_INFORMATION"/>
+		<Row Ruleset="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" Domain="StandardGameSpeeds" Value="GAMESPEED_STANDARD"/>
+		<Row Ruleset="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" Domain="StandardMapSizes" Value="MAPSIZE_STANDARD"/>
+		<Row Ruleset="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE" Domain="StandardTurnLimits" Value="TURNLIMIT_CUSTOM"/>
+	</RulesetSupportedValues>
+	<Victories>
+		<Row Domain="RobotRevolutionChallenge_Victories" VictoryType="VICTORY_SCORE" Name="LOC_VICTORY_SCORE_NAME" Description="LOC_VICTORY_SCORE_TT" />
+	</Victories>
+	<Maps>
+		<Row Domain="RobotRevolutionChallenge_Maps" File="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" Name="LOC_MAP_ROBOT_REVOLUTION_NAME" Description="LOC_MAP_ROBOT_REVOLUTION_DESCRIPTION" RequiresUniqueLeaders="1" />
+	</Maps>
+	<MapSizes>
+		<Row Domain="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" MapSizeType="MAPSIZE_SMALL" Name="LOC_MAPSIZE_SMALL_NAME" Description="LOC_MAPSIZE_SMALL_DESCRIPTION" MinPlayers="6" MaxPlayers="6" DefaultPlayers="6" MinCityStates="0" MaxCityStates="9" DefaultCityStates="0" SortIndex="10"/>
+	</MapSizes>
+	<MapDomainOverrides>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" ParameterId="MapSize" Domain="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua"/>
+	</MapDomainOverrides>
+	<ParameterCriteria>
+		<Row ParameterId="VICTORY_CHALLENGE_ROBOT_REVOLUTION" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE"/>
+	</ParameterCriteria>
+	<ParameterDependencies>
+		<Row ParameterId="Resources" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE"/>
+		<Row ParameterId="StartPosition" ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="NotEquals" ConfigurationValue="RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE"/>
+	</ParameterDependencies>
+
+	<MapLeaders>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="RANDOM"/>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_LAURIER"/>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_ABRAHAM_LINCOLN"/>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_VICTORIA"/>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_JOHN_CURTIN"/>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_SEONDEOK"/>
+		<Row Map="{220FD11E-51DB-4DEF-8E04-46D99856A122}Maps/RobotRevolution.lua" LeaderType="LEADER_SIMON_BOLIVAR"/>
+	</MapLeaders>
+</GameInfo>
