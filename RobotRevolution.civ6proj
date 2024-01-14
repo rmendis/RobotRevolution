@@ -10,7 +10,7 @@
     <Description>Do you have what it takes to ensure your civilization's survival for 100 turns in a frozen, post-nuclear future? Resources are sparse, disasters are intense, and the land itself seems determined to snuff out the last traces of humanity. Oh, and did we mention the robots?[NEWLINE][NEWLINE]Your memory of life before the robot takeover is fading, but parts of the world are still known to you. As the Prime Minister of Canada, will you scour the frozen wasteland for resources and remnants of the old world, or hunker down in your only remaining city and hope to outlast your opponents?</Description>
     <Authors>blkbutterfly74</Authors>
     <SpecialThanks>Firaxis</SpecialThanks>
-    <AffectsSavedGames>true</AffectsSavedGames>
+    <AffectsSavedGames>false</AffectsSavedGames>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>false</SupportsMultiplayer>
     <SupportsHotSeat>false</SupportsHotSeat>
@@ -22,6 +22,7 @@
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
   <Dependency type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" />
+  <Dependency type="Dlc" title="DLC: Australia Civilization Pack" id="E3F53C61-371C-440B-96CE-077D318B36C0" />
 </Associations>]]></AssociationData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -34,6 +35,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maps\CustomMap.Civ6Map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SQL\DefaultSettings.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="SQL\MapConfig.sql">
