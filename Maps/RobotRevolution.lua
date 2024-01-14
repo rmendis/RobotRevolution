@@ -144,7 +144,7 @@ function GenerateMap()
 	};
 	local start_plot_database = AssignStartingPlots.Create(args)
 
-	local GoodyGen = AddGoodies(g_iW, g_iH);
+	--local GoodyGen = AddGoodies(g_iW, g_iH);
 end
 
 -------------------------------------------------------------------------------
