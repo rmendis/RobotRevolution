@@ -18,7 +18,7 @@
     <AssemblyName>RobotRevolution</AssemblyName>
     <RootNamespace>RobotRevolution</RootNamespace>
     <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="Config"><File>SQL/MapConfig.sql</File></UpdateDatabase><UpdateText id="UpdateText"><File>XML/Text.xml</File></UpdateText><UpdateDatabase id="ScenarioConfig"><File>XML/ScenarioConfig.xml</File></UpdateDatabase></FrontEndActions>]]></FrontEndActionData>
-    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="ImportRobotRevolutionMap"><File>Maps/RobotRevolution.lua</File></ImportFiles></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="ImportRobotRevolutionMap"><File>Maps/RobotRevolution.lua</File></ImportFiles><UpdateDatabase id="ScenarioStart"><File>XML/RobotRevolution.xml</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
   <Dependency type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" />
@@ -41,6 +41,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="SQL\MapConfig.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XML\RobotRevolution.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="XML\ScenarioConfig.xml">

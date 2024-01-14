@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RobotRevolution -->
+<!-- Author: blkbutterfly74 -->
+<!-- DateCreated: 1/14/2024 7:06:09 PM -->
+<GameInfo>
+	<Types>
+		<!-- Victories -->
+		<Delete Type="VICTORY_DEFAULT"/>
+		<Delete Type="VICTORY_CULTURE"/>
+		<Delete Type="VICTORY_RELIGIOUS"/>
+		<Delete Type="VICTORY_TECHNOLOGY"/>
+		<Delete Type="VICTORY_CONQUEST"/>
+	</Types>
+
+	<!-- Disable 'Just One More Turn'-->
+	<Defeats>
+		<Update>
+			<Set OneMoreTurn="0"/>
+		</Update>
+	</Defeats>
+	<Victories>
+		<Update>
+			<Set OneMoreTurn="0" />
+		</Update>
+	</Victories>
+
+	<!-- Disable all victories except score -->
+	<Victories>
+		<!-- Set all victories to not be enabled by default -->
+		<Update>
+			<Set EnabledByDefault="0"/>
+		</Update>
+		<!-- Set only the victories we want to be enabled by default -->
+		<Update>
+			<Where VictoryType="VICTORY_SCORE"/>
+			<Set EnabledByDefault="1"/>
+		</Update>
+	</Victories>
+	
+	<MajorStartingUnits>
+		<Delete Era="ERA_INFORMATION" Unit="UNIT_TRADER" />
+		<Delete Era="ERA_INFORMATION" Unit="UNIT_SPEC_OPS" />
+		<Delete Era="ERA_INFORMATION" Unit="UNIT_MACHINE_GUN" />
+
+		<Update>
+			<Set Quantity="1"/>
+			<Where Era="ERA_INFORMATION" Unit="UNIT_SETTLER"/>
+		</Update>
+
+		<Update>
+			<Set Quantity="1"/>
+			<Where Era="ERA_INFORMATION" Unit="UNIT_BUILDER"/>
+		</Update>
+
+		<Update>
+			<Set Quantity="1"/>
+			<Where Era="UNIT_AT_CREW" Unit="UNIT_BUILDER"/>
+		</Update>
+	</MajorStartingUnits>
+</GameInfo>
