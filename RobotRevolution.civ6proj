@@ -18,13 +18,14 @@
     <AssemblyName>RobotRevolution</AssemblyName>
     <RootNamespace>RobotRevolution</RootNamespace>
     <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="Config"><File>SQL/MapConfig.sql</File></UpdateDatabase><UpdateText id="UpdateText"><File>XML/Text.xml</File></UpdateText><UpdateDatabase id="ScenarioConfig"><File>XML/ScenarioConfig.xml</File></UpdateDatabase></FrontEndActions>]]></FrontEndActionData>
-    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="ImportRobotRevolutionMap"><File>Maps/RobotRevolution.lua</File></ImportFiles><UpdateDatabase id="ScenarioStart"><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanVietnamGameplay" /><File>XML/RobotRevolution.xml</File></UpdateDatabase><UpdateText id="UpdateText"><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanVietnamText" /></UpdateText><UpdateArt id="UpdateArt"><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanArt" /></UpdateArt><UpdateIcons id="UpdateIcons"><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanVietnamIcons" /></UpdateIcons></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="ImportRobotRevolutionMap"><File>Maps/RobotRevolution.lua</File></ImportFiles><UpdateDatabase id="ScenarioStart"><Criteria>RobotRevolution</Criteria><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanVietnamGameplay" /><File>XML/RobotRevolution.xml</File></UpdateDatabase><UpdateText id="UpdateText"><Criteria>RobotRevolution</Criteria><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanVietnamText" /></UpdateText><UpdateArt id="UpdateArt"><Criteria>RobotRevolution</Criteria><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanArt" /></UpdateArt><UpdateIcons id="UpdateIcons"><Criteria>RobotRevolution</Criteria><Include mod_id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" action_id="KublaiKhanVietnamIcons" /></UpdateIcons></InGameActions>]]></InGameActionData>
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
   <Dependency type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" />
   <Dependency type="Dlc" title="DLC: Australia Civilization Pack" id="E3F53C61-371C-440B-96CE-077D318B36C0" />
   <Dependency type="Dlc" title="Kublai Khan and Vietnam Pack" id="A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C" />
 </Associations>]]></AssociationData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="RobotRevolution"><RuleSetInUse>RULESET_CHALLENGE_ROBOT_REVOLUTION_DELUXUE</RuleSetInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
